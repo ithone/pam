@@ -1,0 +1,53 @@
+{# MyCompany/MyProject/SysBundle/Resources/views/ViewPart/navbar.html.twig #}
+<div class="navbar">
+{% for main, top in navigation %} 
+  {% if is_granted(top.role) %}
+  <div class="navtopaslink" id="{{ main }}"
+      onmouseover="this.className='navtopaslinkover';"         
+      onmouseout="this.className='navtopaslink';">
+      <a href="{% render 'MyCompanyMyProjectSysBundle:Navigation:get' with {'route': main, 'entry': top } %}">      
+	  {% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': top.title, 'domain': 'navigation' } %}
+      </a>
+   </div>	
+   <div class="navtopcontaineropen" id="navtopcontainer">	
+      {% for section, middle in top.navigation %}
+  		{% if is_granted(middle.role) %}
+       	<div class="naventryaslink" id="{{ section }}"
+           onmouseover="this.className='naventryaslinkover';"
+           onmouseout="this.className='naventryaslink';">
+  		   <a href="{% render 'MyCompanyMyProjectSysBundle:Navigation:get' with {'route': section, 'entry': middle  } %}">
+      	   {% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': middle.title, 'domain': 'navigation' } %}
+           </a>
+         </div>        
+		 <div class="naventrycontaineropen" id="{{ section }}container">
+       		{% for page, bottom in middle.navigation %}
+				{% if is_granted(bottom.role) %}
+       			<div class="navleafaslink" id="{{ page }}"
+                  onmouseover="this.className='navleafaslinkover';"
+                  onmouseout="this.className='navleafaslink';">
+  				  <a href="{% render 'MyCompanyMyProjectSysBundle:Navigation:get' with {'route': page, 'entry': bottom } %}">
+      			  {% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': bottom.title, 'domain': 'navigation' } %}     
+      			  </a>
+      			</div>
+                <div class="navleafcontaineropen" id="{{ page }}container">
+       		        {% for endpage, endbottom in bottom.navigation %}
+						{% if is_granted(endbottom.role) %} 
+       			        <div class="navniddleaslink" id="{{ endpage }}"
+                          onmouseover="this.className='navniddleaslinkover';"
+                          onmouseout="this.className='navniddleaslink';">
+  				          <a href="{% render 'MyCompanyMyProjectSysBundle:Navigation:get' with {'route': endpage, 'entry': endbottom } %}">
+      			          {% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': endbottom.title, 'domain': 'navigation' } %}      
+      			          </a>
+      			        </div>
+						{% endif %}
+					{% endfor %}
+				</div>	
+				{% endif %}
+       		{% endfor %}
+         </div>
+		 {% endif %}
+      {% endfor %}
+    </div> 
+    {% endif %}
+{% endfor %}
+</div>

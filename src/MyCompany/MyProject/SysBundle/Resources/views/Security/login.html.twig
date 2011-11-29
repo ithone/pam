@@ -1,0 +1,35 @@
+{# MyCompany/MyProject/SysBundle/Resources/views/Security/login.html.twig #}
+{% extends 'MyCompanyMyProjectSysBundle:Security:security.html.twig' %}
+
+{% block content %}
+<div class="content">
+<div class="leftpadding"></div>
+{# MyCompany/MyProject/SysBundle/Resources/views/Security/Login #}
+{% if error %}
+    <div class="errormessage" id="errormessage">{{ error.message }}</div>
+{% endif %}
+<div class="login" id="login">
+<form action="{{ path('login_check') }}" method="post">
+	<div class="username" id="username">
+    <label for="username">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': 'Username:', 'domain': 'login' } %}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+	</div>
+	<div class="password" id="password">
+    <label for="password">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': 'Password:', 'domain': 'login' } %}</label>
+    <input type="password" id="password" name="_password" />
+	</div>
+    {#
+        If you want to control the URL the user is redirected to on success (more details below)
+        <input type="hidden" name="_target_path" value="/account" />
+    #}
+	<div class="loginbutton" id="loginbutton">
+	<button name="login" type=submit class="buttonaslink" id="loginaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': 'Send', 'domain': 'login' } %}</button>
+	</div>
+</form>
+</div>
+<div class="rightpadding"></div>
+</div>
+{% endblock content%}
+

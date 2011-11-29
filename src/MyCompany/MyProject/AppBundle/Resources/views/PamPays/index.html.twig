@@ -1,0 +1,124 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamPays/index.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamPays:pam_pays.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+function f(valeur){ 
+	if (isNaN(valeur.split(' ').join(''))){alert('num�rique svp'); return false;} 
+	var val=new Array(); var tempval=valeur.split('.'); valeur=tempval[0].split(' ').join('')
+	valeur=valeur.split('').reverse(); var i=0;
+	while(i<valeur.length){ 
+ 		val.push( (valeur[i+2]?valeur[i+2]:'') + (valeur[i+1]?valeur[i+1]:'') + valeur[i] );
+ 		i=i+3;
+	} 
+	val=val.reverse().join(' ') +( tempval[1]?tempval[1].length>0?'.'+tempval[1]:'':'');
+	document.write(val)
+}
+function p(valeur){ 
+	document.write((valeur * 100) + ' %');
+}
+</script>
+<div class="content">
+{% if is_granted('ROLE_INDEX') %}
+<div class="leftpadding" id="leftpadding"></div>
+<div class="indexcontent">
+  <h1>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_index_title#', 'domain': 'labels' } %}PamPays</h1>
+  <div class="tableindex" id="tableindex">
+    <table >
+      <thead>
+        <div class="tableindextitle" id="tableindextitle">
+        <tr>
+			{% if is_granted('ROLE_SHOW') %}
+            <div class="indextitleactions" id="indextitleactions"><th>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_actions_label#', 'domain': 'labels' } %}</th></div>
+			{% endif %}
+            <div class="indextitleid" id="indextitleid"><th>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_id_label#', 'domain': 'labels' } %}</th></div>
+			<div class="indextitleitem" id="indextitlelabel"><th>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_label_label#', 'domain': 'labels' } %}</th></div>
+			<div class="indextitleitem" id="indextitlename"><th>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_name_label#', 'domain': 'labels' } %}</th></div>
+        </tr>
+        </div>
+    </thead>
+    <tbody>	
+	{% set flag = '1' %}
+    {% for entity in entities %}		
+        {% if flag is odd %}
+         <div class="oddlineindex"> 
+        <tr class="oddrow">
+          {% set flag = '2' %} 	
+        {% else %}       
+         <div class="evenlineindex">
+        <tr class="evenrow">
+          {% set flag = '1' %}		
+        {% endif %}
+            <div class="actionsindex" id="actionsindex">
+			{% if is_granted('ROLE_SHOW') %}	   
+            <td>
+                <div class="action" id="showaction"> 
+                        <a class="buttonaslink" id="showaction" href="{{ path('mycompany_myproject_appbundle_pam_pays_show', { 'id': entity.id }) }}"
+                            onmouseover="this.className='buttonaslinkover';"
+                            onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_show_btn#', 'domain': 'labels' } %}]</a>
+                </div> 
+				{% if is_granted('ROLE_EDIT') %}
+                <div class="action" id="editaction">
+                        <a class="buttonaslink" id="editaction" href="{{ path('mycompany_myproject_appbundle_pam_pays_edit', { 'id': entity.id }) }}"
+                            onmouseover="this.className='buttonaslinkover';"
+                            onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_edit_btn#', 'domain': 'labels' } %}]</a>
+                </div>
+				{% endif %}
+            </td> 
+			{% endif %}
+            </div>
+            <div class="itemslineindex" id="itemslineindex"> 	
+            <td><a class="indexid" href="{{ path('mycompany_myproject_appbundle_pam_pays_show', { 'id': entity.id }) }}">{{ entity.id | trans }}</a></td>
+<div class="indexitem" id="indexitemlabel">
+				
+				
+				
+<td class="item" id="item" >{{ entity.label| trans }}</td></div>
+<div class="indexitem" id="indexitemname">
+				
+				
+				
+<td class="item" id="item" >{{ entity.name| trans }}</td></div>
+            </div> 
+        </tr>
+        </div>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% if is_granted('ROLE_NEW') %}
+<div class="commands" id="commands">
+   <div class="command" id="newcommand">
+        <form class="command" id="newform" action="{{ path('mycompany_myproject_appbundle_pam_pays_new') }}" method="get">
+            <button name="new" type=submit class="buttonaslink" id="newaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_new_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+</div>
+{% endif %}
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_INDEX')) %}
+<div class="infomessage" id="infomessage">
+Vous n'�tes pas autoris�(e) � utliser cette fonction!<br>
+Adressez-vous � l'administrateur de l'application
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*([A-Z].*)[A-Z].*$");
+	re2 = new RegExp("^.*[A-Z].*([A-Z].*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "INDEX";
+	s4 = "0000000"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("PamPays");
+</script>
+</div>
+</div>
+{% endblock content%}

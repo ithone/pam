@@ -1,0 +1,15 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamKri/guide_kri.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamKri:pam_kri.html.twig' %}
+{% block content %}
+<SCRIPT language=javascript>
+	function openLink() {
+		{% set var %}{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_lang#', 'domain': 'system' } %}{% endset %}
+		{% set link = "http://localhost/Symfony/web/guide/%sys_lang%"|replace({'%sys_lang%': var}) %}
+		window.open("{{ link }}");
+		window.location="{{ path(path, { 'id': id, 'name': name, 'action': 'show' }) }}";
+	}
+openLink();
+</SCRIPT>
+<div class="content">
+</div>
+{% endblock content%}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#sys_lang#</source>
+                <target>en</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#sys_scope#</source>
+                <target>Habilitation perimeter : %scope%</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#sys_not_authorized#</source>
+                <target>SYS001I You profile doesn't allow you to access to this function.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#sys_userid#</source>
+                <target>Userid : %userid%</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#sys_title#</source>
+                <target>CBMT system administration</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

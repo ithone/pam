@@ -1,0 +1,17 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/ViewPart/menu.html.twig #}
+<div class="leftmenubarpadding" id="leftmenubarpadding"></div>
+{% if is_granted('ROLE_SYS_MAIN') %}
+<div class="menuentry" id="sys_mainentry">
+<a href="{{ path('_main') }}">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_main#', 'domain': 'menu' } %}
+</a>
+</div>
+{% endif %}
+{% if is_granted('ROLE_SYS_LOGOUT') %}
+<div class="menuentry" id="sys_logoutentry">
+<a href="{{ path('_logout') }}">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_logout#', 'domain': 'menu' } %}
+</a>
+</div>
+{% endif %}
+<div class="rightmenubarpadding" id="rightmenubarpadding"></div>

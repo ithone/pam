@@ -1,0 +1,127 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamEvent/show.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamEvent:pam_event.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+function f(valeur){ 
+	if (isNaN(valeur.split(' ').join(''))){alert('num�rique svp'); return false;} 
+	var val=new Array(); var tempval=valeur.split('.'); valeur=tempval[0].split(' ').join('')
+	valeur=valeur.split('').reverse(); var i=0;
+	while(i<valeur.length){ 
+ 		val.push( (valeur[i+2]?valeur[i+2]:'') + (valeur[i+1]?valeur[i+1]:'') + valeur[i] );
+ 		i=i+3;
+	} 
+	val=val.reverse().join(' ') +( tempval[1]?tempval[1].length>0?'.'+tempval[1]:'':'');
+	document.write(val + " {{ 'EUR' | trans }}")
+}
+function p(valeur){ 
+	document.write((valeur * 100) + ' %');
+}
+</script>
+<div class="content">
+{% if is_granted('ROLE_SHOW') %}
+<div class="leftpadding" id="leftpadding"></div>
+<div class="showcontent">
+{% set title = '#form_event_show_%name%_title#'| trans([], 'labels') | replace({'%name%': name,'%action%': action, '%scope%': scope})%}
+<h1>{{ title | trans([], 'labels') }}</h1>
+<div class="showtable">
+<table>
+	<tr>
+	<table>
+			{% set flag = '1' %}
+			{% for entity in entities %} 
+				{% if flag == 1 %} 
+						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_zone_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_zone_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.saisie.systeme.filiale.zone | trans }}</td></tr>						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_filiale_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_filiale_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.saisie.systeme.filiale | trans }}</td></tr>						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_filiale_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_filiale_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.saisie.systeme.filiale | trans }}</td></tr>						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_semestre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_semestre_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.saisie.periode.semestre | trans }}</td></tr>						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_typologie_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_typologie_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.typologie | trans }}</td></tr>						<tr><th ><acronym class="help" id="help" title="{{ '#form_dateevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_dateevt_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.dateEvt |date('d/m/Y')| trans }}</td></tr>
+						
+						
+						
+						<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_montant_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_montant_label#', 'domain': 'labels' } %}:</acronym></th><td align="left"><script>f("{{ entity.montant | trans }}")</script><div class="padding" id="padding"></div></td></tr>
+						
+						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_titre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_titre_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.titre | trans }}</td></tr>						
+						
+						
+<tr><th align="right"><acronym class="help" id="help" title="{{ '#form_description_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_description_label#', 'domain': 'labels' } %}:</acronym></th><td align="left">{{ entity.description | trans }}</td></tr>					{% set flag = '2' %}
+				{% endif %}
+			{% endfor %}
+	</table>
+	</tr>
+	<tr>
+    <table >
+      <thead>
+        <div class="tableindextitle" id="tableindextitle">
+        	<tr>
+			</tr>
+		</div>
+	</thead>
+	   <tbody>		
+		{% set flag = '1' %}
+		<div class="evenlineindex"> 
+		<tr class="evenrow">
+		{% for entity in entities %}
+  			{% if flag is odd %}
+         		<div class="oddlineindex"> 
+        		<tr class="oddrow">
+          		{% set flag = '2' %} 	
+        	{% else %}       
+         		<div class="evenlineindex">
+        		<tr class="evenrow">
+          		{% set flag = '1' %}		
+        	{% endif %}	
+			</tr>
+		{% endfor %} 
+		</tbody>
+	</table>
+	</tr>
+</table>
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="backcommand">
+        <form class="command" id="backform" action="{{ path(path, { 'id': id, 'name': name, 'action': action, 'scope': scope, 'back': 'show'} ) }}" method="post">
+            <button name="back" type=submit class="buttonaslink" id="backaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_back_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_SHOW')) %}
+<div class="infomessage" id="infomessage">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_not_authorized#', 'domain': 'system' } %}
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*[_](.*)[_].*$");
+	re2 = new RegExp("^.*[_].*[_](.*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "SHOW";
+	s4 = "0000000" + "{{ id }}"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("{{ path }}");
+</script>
+</div>
+</div>
+{% endblock content%}

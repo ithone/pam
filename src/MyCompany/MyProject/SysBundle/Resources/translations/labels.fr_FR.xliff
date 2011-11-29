@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#form_language_label#</source>
+                <target>Langue</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#form_delete_btn#</source>
+                <target>Supprimer</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#form_edit_title#</source>
+                <target>Édition de la fiche </target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#form_edit_btn#</source>
+                <target>Éditer</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#form_index_title#</source>
+                <target>Liste des fiches </target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#form_enter_btn#</source>
+                <target>Saisir</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#form_id_label#</source>
+                <target>Fiche N°</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#form_adminrole_label#</source>
+                <target>Rôle</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#form_cancel_btn#</source>
+                <target>Annuler</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#form_show_btn#</source>
+                <target>Voir</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#form_back_btn#</source>
+                <target>Retour</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#form_new_btn#</source>
+                <target>Nouveau</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#form_username_label#</source>
+                <target>Utilisateur</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#form_name_label#</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#form_saisie_invalide_label#</source>
+                <target>Saisie invalide</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#form_conf_save_label#</source>
+                <target>Confirmez-vous la sauvegarde ?</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#form_actions_label#</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>#form_create_btn#</source>
+                <target>Créer</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>#form_country_label#</source>
+                <target>Pays</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>#form_update_btn#</source>
+                <target>Modifier</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>#form_conf_create_label#</source>
+                <target>Confirmez-vous la création?</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>#form_adminlocale_label#</source>
+                <target>Code langue</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>#form_show_title#</source>
+                <target>Détail de la fiche </target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>#form_new_title#</source>
+                <target>Création d'une nouvelle fiche </target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>#form_conf_delete_label#</source>
+                <target>Confirmez-vous la suppression?</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>#form_save_btn#</source>
+                <target>Enregistrer</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

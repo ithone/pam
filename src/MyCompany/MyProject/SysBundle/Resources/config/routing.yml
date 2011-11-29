@@ -1,0 +1,96 @@
+# Config routing class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\routing
+MyCompanyMyProjectSysBundleEntities:
+    resource: "@MyCompanyMyProjectSysBundle/Resources/Config/entities.yml"
+    prefix:   /
+MyCompanyMyProjectSysBundleLogin:
+    resource: "@MyCompanyMyProjectSysBundle/Resources/Config/login.yml"
+    prefix:   /
+
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\page101
+mycompany_myproject_sysbundle_page101:
+   pattern:  /{_locale}/admin/locale/new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminLocale:new, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\page001
+mycompany_myproject_sysbundle_page001:
+   pattern:  /{_locale}/admin/role/new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminRole:new, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\section3
+mycompany_myproject_sysbundle_section3:
+   pattern:  /{_locale}/admin/reference
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminReference:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\section2
+mycompany_myproject_sysbundle_section2:
+   pattern:  /{_locale}/admin/user
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminUser:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\section1
+mycompany_myproject_sysbundle_section1:
+   pattern:  /{_locale}/admin/system
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminLocale:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\Page0010
+mycompany_myproject_sysbundle_page0010:
+   pattern:  /{_locale}/admin/role/new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminRole:new, name: page0010, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\main
+_main:
+   pattern: /main
+   defaults: { _controller: MyCompanyMyProjectSysBundle:Main:init }
+mycompany_myproject_sysbundle_main:
+   pattern:  /{_locale}/admin/
+   defaults: { _controller: MyCompanyMyProjectSysBundle:Main:init , name:main, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\page301
+mycompany_myproject_sysbundle_page301:
+   pattern:  /{_locale}/admin/reference:new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminReference:new, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\section0
+mycompany_myproject_sysbundle_section0:
+   pattern:  /{_locale}/admin/role
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminRole:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\page201
+mycompany_myproject_sysbundle_page201:
+   pattern:  /{_locale}/admin/user/new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminUser:new, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\section4
+mycompany_myproject_sysbundle_section4:
+   pattern:  /{_locale}/admin/menu
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminMenu:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\page401
+mycompany_myproject_sysbundle_page401:
+   pattern:  /{_locale}/admin/menu/new
+   defaults: { _controller: MyCompanyMyProjectSysBundle:AdminMenu:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU

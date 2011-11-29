@@ -1,0 +1,27 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/base_app.html.twig #}
+{% extends '::base.html.twig' %}
+{% block title %}{% render 'MyCompanyMyProjectAppBundle:View:title' %}{% endblock %}
+
+{% block body %}
+<div class="body" id="body">
+    {% block header %} 
+    {% block loginheader %} 
+    {% endblock loginheader%}
+    {% endblock header%}
+    {% block navbar %}    		
+    {% endblock navbar%}
+    {% block content %}
+    {% block welcome %}
+    {% endblock welcome%}
+    {% endblock content%}
+    {% block footer %}  		
+    {% endblock footer%}
+</div>
+{% endblock body%}
+
+{% block stylesheets %}
+{% stylesheets '@MyCompanyMyProjectAppBundle/Resources/public/css/*'  %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock stylesheets %}
+

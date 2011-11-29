@@ -1,0 +1,69 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamFiliale/new.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamFiliale:pam_filiale.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+function f(valeur){ 
+	if (isNaN(valeur.split(' ').join(''))){alert('num�rique svp'); return false;} 
+	var val=new Array(); var tempval=valeur.split('.'); valeur=tempval[0].split(' ').join('')
+	valeur=valeur.split('').reverse(); var i=0;
+	while(i<valeur.length){ 
+ 		val.push( (valeur[i+2]?valeur[i+2]:'') + (valeur[i+1]?valeur[i+1]:'') + valeur[i] );
+ 		i=i+3;
+	} 
+	val=val.reverse().join(' ') +( tempval[1]?tempval[1].length>0?'.'+tempval[1]:'':'');
+	document.write(val)
+}
+function p(valeur){ 
+	document.write((valeur * 100) + ' %');
+}
+</script>
+<div class="content">
+{% if is_granted('ROLE_NEW') %}
+<div class="leftpadding"></div>
+<div class="newcontent">
+<h1>{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_new_title#', 'domain': 'labels' } %}PamFiliale</h1>
+<div class="newform">
+<form action="{{ path('mycompany_myproject_appbundle_pam_filiale_create') }}" method="post" {{ form_enctype(form) }}>
+   <div class="command" id="createcommand">
+     <button name="create" type=submit class="buttonaslink" id="createaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_create_btn#', 'domain': 'labels' } %}</button>
+   </div>
+   {{ form_widget(form) }}
+</form>
+</div>
+<div class="commands">
+   <div class="command" id="backcommand">
+        <form class="command" id="backform" action="{{ path('mycompany_myproject_appbundle_pam_filiale') }}" method="get">
+            <button name="back" type=submit class="buttonaslink" id="backaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_back_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_NEW')) %}
+<div class="infomessage" id="infomessage">
+Vous n'�tes pas autoris�(e) � utliser cette fonction!<br>
+Adressez-vous � l'administrateur de l'application
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*([A-Z].*)[A-Z].*$");
+	re2 = new RegExp("^.*[A-Z].*([A-Z].*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "INDEX";
+	s4 = "0000000"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("PamFiliale");
+</script>
+</div>
+</div>
+{% endblock content%}

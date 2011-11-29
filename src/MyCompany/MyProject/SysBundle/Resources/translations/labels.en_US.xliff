@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#form_edit_title#</source>
+                <target>Edit record </target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#form_create_btn#</source>
+                <target>Create</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#form_update_btn#</source>
+                <target>Update</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#form_conf_delete_label#</source>
+                <target>Do you confirm delete?</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#form_delete_btn#</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#form_new_title#</source>
+                <target>Record creation for </target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#form_id_label#</source>
+                <target>Record N°</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#form_edit_btn#</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#form_cancel_btn#</source>
+                <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#form_show_title#</source>
+                <target>Record details for </target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#form_saisie_invalide_label#</source>
+                <target>Invalid input</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#form_save_btn#</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#form_name_label#</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#form_username_label#</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#form_index_title#</source>
+                <target>Records summary for </target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#form_country_label#</source>
+                <target>Country</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#form_show_btn#</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>#form_enter_btn#</source>
+                <target>Enter</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>#form_conf_create_label#</source>
+                <target>Do you confirm create?</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>#form_language_label#</source>
+                <target>Language</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>#form_new_btn#</source>
+                <target>New</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>#form_adminrole_label#</source>
+                <target>Role</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>#form_conf_save_label#</source>
+                <target>Do you confirm save? </target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>#form_adminlocale_label#</source>
+                <target>Locale</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>#form_actions_label#</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>#form_back_btn#</source>
+                <target>Back</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

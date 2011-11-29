@@ -1,0 +1,183 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamEvent/edit.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamEvent:pam_event.html.twig' %}
+{% block content %}
+<div class="content">
+{% if is_granted('ROLE_EDIT') %}
+<div class="leftpadding" id="leftpadding"></div>
+<div class="indexcontent" id="indexcontent">
+{% set title = '#form_event_edit_%name%_title#'| trans([], 'labels') | replace({'%name%': name,'%action%': action, '%scope%': scope})%}
+<h1>{{ title | trans([], 'labels') }}</h1>
+{% if form.vars.errors|length>0 %}
+	{% set cnt = 1 %}
+	{% for msg in form.vars.errors %}
+		{% if cnt==1 %}
+			{% set message = msg.getMessageTemplate %}	 
+			<div class="errors" id="errors">{{ error | trans }}:  {{ message|trans([], 'validators') }}</div>
+			{% set cnt = 2 %}
+		{% endif %}	
+	{% endfor %}
+{% endif %}
+<div class="tableindex" id="tableindex">
+{% set path = path|join('_post') %}				
+<form name="formedit" onsubmit="return onSubmitForm();" method="post" {{ form_enctype(form) }}>	
+<table>
+	<tr>
+	<table>
+		<tr>
+				<div class="indextitleitem" id="indextitlefiliale">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_filiale_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_filiale_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.systeme.filiale | trans }}</td>
+				<div class="indextitleitem" id="indextitleacquisition">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_acquisition_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_acquisition_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.systeme.acquisition | trans }}</td>
+				<div class="indextitleitem" id="indextitleannee">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_annee_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_annee_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.periode.annee | trans }}</td>
+				<div class="indextitleitem" id="indextitlesemestre">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_semestre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_semestre_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.periode.semestre | trans }}</td>
+		</tr>
+	</table>
+	</tr>
+	<tr>
+	<table>
+   		<thead>	
+   			<div class="tableindextitle" id="tableindextitle">
+  	  			<tr>
+							<div class="indextitleitem" id="indextitletypologie"><th width="50"><acronym class="help" id="help" title="{{ '#form_typologie_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_typologie_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitledateevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_dateevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_dateevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlemontant"><th width="50"><acronym class="help" id="help" title="{{ '#form_montant_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_montant_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitletitre"><th width="50"><acronym class="help" id="help" title="{{ '#form_titre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_titre_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitledescription"><th width="50"><acronym class="help" id="help" title="{{ '#form_description_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_description_label#', 'domain': 'labels' } %}</acronym></th></div>
+					{% if is_granted('ROLE_UPDATE') %}						
+            			<div class="indextitleactions" id="indextitleactions"><th width="50"><acronym class="help" id="help" title="{{ '#form_actions_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_actions_label#', 'domain': 'labels' } %}</acronym></th></div>
+					{% endif %}	
+	  			</tr>
+			</div>
+		</thead>
+		<tbody>
+			{% if form is not null %}
+				{% for row in form.evenement %}
+					<div class="evenlineindex">
+					<tr class="evenrow">
+								<td>{{ form_errors(row.typologie) }}{{ form_widget(row.typologie) }}</td>
+								<td>{{ form_errors(row.dateEvt) }}{{ form_widget(row.dateEvt) }}</td>
+								<td>{{ form_errors(row.montant) }}{{ form_widget(row.montant) }}</td>
+								<td>{{ form_errors(row.titre) }}{{ form_widget(row.titre) }}</td>
+								<td>{{ form_errors(row.description) }}{{ form_widget(row.description) }}</td>
+						{% if is_granted('ROLE_UPDATE') %}											
+							<td>
+           					<div class="actionsindex" id="actionsindex">
+     							<div class="action" id="updateaction">	 
+									<acronym class="help" id="help" title="{{ '#form_update_help#' | trans([], 'help') }}">  
+       								<button name="operation" type=submit class="buttonaslink" id="updateaction"
+										onclick="document.pressed=this.value" value="update"
+            							onmouseover="this.className='buttonaslinkover';"
+            							onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_update_btn#', 'domain': 'labels' } %}]</button>
+									</acronym>
+      							</div>
+							</div>
+							</td>
+						{% endif %}
+					</tr>
+					</div>
+				{% endfor %} 				
+			{% endif %}
+		</tbody>
+		<thead>
+			{% if is_granted('ROLE_UPDATE') %}
+			<th></th>	
+			{% endif %}		
+		</thead>
+		<tbody>
+			<div class="oddlineindex">
+			<tr class="oddrow">
+				{% if is_granted('ROLE_UPDATE') %}
+				<td></td>	
+				{% endif %}
+			</tr>	
+			</div>
+		</tbody>
+	</table>	
+	</tr>
+	{{ form_row(form._token) }}
+</table>
+	{% set path = path|join('_post') %}	
+     <div class="command" id="savecommand">	
+		<acronym class="help" id="help" title="{{ '#form_save_help#' | trans([], 'help') }}">   
+       <button name="operation" type=submit class="buttonaslink" id="saveaction"
+			onclick="document.pressed=this.value" value="save"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_save_btn#', 'domain': 'labels' } %}</button>
+		</acronym>
+      </div>	
+</form>	
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="backcommand">
+		<acronym class="help" id="help" title="{{ '#form_back_help#' | trans([], 'help') }}">
+        <form class="command" id="backform" action="{{ path(path, { 'id': id, 'name': name, 'action': action, 'scope': scope, 'back': 'edit' } ) }}" method="post">
+            <button name="back" type=submit class="buttonaslink" id="backaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_back_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+   <div class="command" id="cancelcommand">
+		<acronym class="help" id="help" title="{{ '#form_cancel_help#' | trans([], 'help') }}">
+        <form class="command" id="cancelform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'edit' } ) }}" method="get">
+            <button name="cancel" type=submit class="buttonaslink" id="cancelaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_cancel_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_EDIT')) %}
+<div class="infomessage" id="infomessage">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_not_authorized#', 'domain': 'system' } %}
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*[_](.*)[_].*$");
+	re2 = new RegExp("^.*[_].*[_](.*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "EDIT";
+	s4 = "0000000" + "{{ id }}"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("{{ path }}");
+</script>
+</div>
+</div>
+<script type="text/javascript">
+function onSubmitForm()
+{
+  if(document.pressed == 'update')
+  {
+   document.formedit.action ="{{path(path, { 'id': form.vars.value.id, 'name': name, 'action': 'update' }) }}";
+  }
+  else
+  if(document.pressed == 'save')
+  {
+	if(demandeConfirmation())
+    	document.formedit.action ="{{path(path, { 'id': form.vars.value.id, 'name': name, 'action': 'save' }) }}";
+	else
+		document.formedit.action ="{{path(path, { 'id': form.vars.value.id, 'name': name, 'action': 'update' }) }}";
+  }
+  return true;
+}
+function demandeConfirmation() {
+		var answer = confirm("{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_conf_save_label#', 'domain': 'labels' } %}")
+			if (answer)	return true;
+			return false;
+}
+</script>
+{% endblock content%}

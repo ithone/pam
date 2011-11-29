@@ -1,0 +1,25 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamFraude/welcome.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamFraude:pam_fraude.html.twig' %}
+{% block content %}
+<div class="content">
+<div class="leftpadding" id="leftpadding"></div>
+<div class="textcontent">
+<div class="text" id="text">
+<p>
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#app_fraude_welcome#', 'domain': 'welcome' } %}
+</p>
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="guidefraudecommand">	
+		{% set path = path|join('guideFraude') %}			
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'guideFraude' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="guideFraudeaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_guidefraude_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+</div>
+{% endblock content%}

@@ -1,0 +1,5 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/ViewPart/logo.html.twig #}
+<div class="logopicture" id="logopicture">
+{% set items = { 'text1': 'bundles/mycompanymyprojectapp/images/', 'text2': logo } %}
+<img src="{{ asset(items|join()) }}" alt="{{ logo }}" />
+</div>

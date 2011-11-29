@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SysBundle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--[if IE]><script src="excanvas.compressed.js"></script><![endif]-->
+    <script src="RGraph.common.core.js" ></script>
+    <script src="RGraph.common.tooltips.js" ></script>
+    <script src="RGraph.bar.js" ></script>
+    <script src="RGraph.scatter.js" ></script>
+  </head>
+
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="title">SysBundle</td></tr>
+      <tr><td><div align="center"><p><a href="SysBundle.html">Back to Code Coverage report</a></p></div></td></tr>
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+    </table>
+
+    <br />
+
+    <center>
+      <table width="90%" cellpadding="2" cellspacing="1" border="0">
+        <tr>
+          <td valign="top">
+            <h2>Class Coverage Distribution</h2>
+            <canvas id="classCoverageDistribution" width="475" height="200"></canvas>
+            <script>
+            var ccd = new RGraph.Bar('classCoverageDistribution', [28,1,0,0,0,0,0,0,0,0,0,1]);
+            ccd.Set('chart.background.barcolor1', 'white');
+            ccd.Set('chart.background.barcolor2', 'white');
+            ccd.Set('chart.colors', ['blue']);
+            ccd.Set('chart.shadow', true);
+            ccd.Set('chart.shadow.offsetx', 3);
+            ccd.Set('chart.shadow.offsety', 3);
+            ccd.Set('chart.labels', ['0%','0-10%','10-20%','20-30%','30-40%','40-50%','50-60%','60-70%','70-80%','80-90%','90-100%','100%']);
+            ccd.Set('chart.text.size', 5);
+            ccd.Draw();
+            </script>
+          </td>
+
+          <td valign="top">
+            <h2>Class Complexity</h2>
+            <canvas id="classComplexity" width="475" height="200"></canvas>
+            <script>
+            var cc = new RGraph.Scatter('classComplexity', [[0,22,"blue","AdminLocaleController"],[0,22,"blue","AdminRoleController"],[0,22,"blue","AdminUserController"],[0,4,"blue","MainController"],[0,2,"blue","NavigationController"],[0,1,"blue","Section3"],[0,1,"blue","Page001"],[0,1,"blue","Section2"],[0,1,"blue","Section1"],[0,1,"blue","Page0010"],[0,1,"blue","Main"],[0,1,"blue","Page401"],[0,1,"blue","Section0"],[0,1,"blue","Section4"],[0,1,"blue","Page301"],[0,1,"blue","Page101"],[0,1,"blue","Page201"],[0,4,"blue","SecurityController"],[0,15,"blue","ViewController"],[0,1,"blue","Configuration"],[0,1,"blue","MyCompanyMyProjectSysExtension"],[0,9,"blue","AdminLocale"],[0,5,"blue","AdminRole"],[3.030303030303,18,"blue","AdminUser"],[0,3,"blue","AdminLocaleType"],[0,3,"blue","AdminRoleType"],[0,3,"blue","AdminUserType"],[100,0,"blue","MyCompanyMyProjectSysBundle"],[0,3,"blue","HabilitationManager"],[0,0,"blue","JournalManager"]]);
+            cc.Set('chart.xmax', 100);
+            cc.Set('chart.background.barcolor1', 'white');
+            cc.Set('chart.background.barcolor2', 'white');
+            cc.Set('chart.tickmarks', 'plus');
+            cc.Set('chart.ticksize', 5);
+            cc.Set('chart.text.size', 5);
+            cc.Set('chart.ylabels', false);
+            cc.Draw();
+            </script>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <h2>Top Project Risks</h2>
+            <ul>
+              <li><a href="SysBundle_Controller_AdminLocaleController.php.html#19">AdminLocaleController</a> (506)</li>
+              <li><a href="SysBundle_Controller_AdminRoleController.php.html#19">AdminRoleController</a> (506)</li>
+              <li><a href="SysBundle_Controller_AdminUserController.php.html#19">AdminUserController</a> (506)</li>
+              <li><a href="SysBundle_Entity_AdminUser.php.html#17">AdminUser</a> (313)</li>
+              <li><a href="SysBundle_Controller_SecurityController.php.html#10">SecurityController</a> (20)</li>
+              <li><a href="SysBundle_Controller_MainController.php.html#11">MainController</a> (20)</li>
+
+            </ul>
+          </td>
+
+          <td valign="top">
+            <h2>Least Tested Methods</h2>
+            <ul>
+              <li><a href="SysBundle_Entity_AdminLocale.php.html#114">AdminLocale::setName</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminRole.php.html#32">AdminRole::__construct</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminLocale.php.html#106">AdminLocale::setLanguage</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminLocale.php.html#98">AdminLocale::setCountry</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminLocale.php.html#90">AdminLocale::__toString</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminRole.php.html#41">AdminRole::getId</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminRole.php.html#50">AdminRole::getName</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminUser.php.html#72">AdminUser::getSalt</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminUser.php.html#63">AdminUser::getId</a> (0%)</li>
+              <li><a href="SysBundle_Entity_AdminRole.php.html#67">AdminRole::setName</a> (0%)</li>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <br />
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.0.4</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.5</a> and PHPUnit 3.5.14 at Thu Oct 6 8:55:31 UTC 2011.</td></tr>
+    </table>
+
+    <br/>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamEvent/export.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamEvent:pam_event.html.twig' %}
+{% block content %}
+<SCRIPT language=javascript>
+	function openLink() {
+		{% set var %}{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_lang#', 'domain': 'system' } %}{% endset %}
+		{% set link = "http://localhost/Symfony/web/guide/%sys_lang%"|replace({'%sys_lang%': var}) %}
+		window.open("{{ link }}");
+		window.location="{{ path(path, { 'id': id, 'name': name, 'action': 'welcome' }) }}";
+	}
+openLink();
+</SCRIPT>
+<div class="content">
+</div>
+{% endblock content%}

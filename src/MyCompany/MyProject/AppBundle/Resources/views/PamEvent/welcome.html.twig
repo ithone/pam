@@ -1,0 +1,25 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamEvent/welcome.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamEvent:pam_event.html.twig' %}
+{% block content %}
+<div class="content">
+<div class="leftpadding" id="leftpadding"></div>
+<div class="textcontent">
+<div class="text" id="text">
+<p>
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#app_event_welcome#', 'domain': 'welcome' } %}
+</p>
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="guideeventcommand">	
+		{% set path = path|join('guideEvent') %}			
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'guideEvent' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="guideEventaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_guideevent_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+</div>
+{% endblock content%}

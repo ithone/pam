@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#app_fraude_welcome#</source>
+                <target>Wecome on Frauds declarative Website</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#app_welcome#</source>
+                <target>Welcome on CBMT site</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

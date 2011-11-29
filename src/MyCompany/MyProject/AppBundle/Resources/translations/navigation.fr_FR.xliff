@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#app_nav_section0#</source>
+                <target>Gestion de la configuration</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#app_nav_section1#</source>
+                <target>Saisie données fraude</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#app_nav_page0013#</source>
+                <target>Systèmes d'acquisition</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#app_nav_page0010#</source>
+                <target>Plage d'activité de PAM</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#app_nav_page0014#</source>
+                <target>Pays couverts par PAM</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#app_nav_page001#</source>
+                <target>Configuration du système</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#app_nav_page0016#</source>
+                <target>Systèmes opérationnels</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#app_nav_page002#</source>
+                <target>Configuration de Fraude</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#app_nav_page0020#</source>
+                <target>Gestion des typologies</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#app_nav_page0012#</source>
+                <target>Périodes</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#app_nav_page0015#</source>
+                <target>Zones administratives</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#app_nav_page0011#</source>
+                <target>Dates de saisie</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#app_nav_page102#</source>
+                <target>Fraudes sur cartes</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#app_nav_page101#</source>
+                <target>Fraudes sur DAB</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#app_nav_main#</source>
+                <target>Accueil</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#app_nav_page103#</source>
+                <target>Fraudes sur TPE</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#app_nav_page0017#</source>
+                <target>Gestion des filiales</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

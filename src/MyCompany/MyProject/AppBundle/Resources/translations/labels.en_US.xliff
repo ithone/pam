@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#form_evolmaxevt_label#</source>
+                <target>Trend (%)</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#form_fraude_show_TPE_title#</source>
+                <target>POS record display</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#form_valminevt_label#</source>
+                <target>Minimum event (€)</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#form_titre_label#</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#form_total_activites_label#</source>
+                <target>All activities</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#form_systeme_label#</source>
+                <target>Acquiry system</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#form_annee_label#</source>
+                <target>Year</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#form_periode_label#</source>
+                <target>Data Input period</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#form_dateevt_label#</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#form_currency_label#</source>
+                <target>Currency</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#form_montantnet_label#</source>
+                <target>Net amount (€)</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#form_saisie_label#</source>
+                <target>Data input</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#form_zone_label#</source>
+                <target>Area</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#form_fraude_new_CARTE_title#</source>
+                <target>CARD record creation</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#form_totalbrut_label#</source>
+                <target>Gross total</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#form_semestre_label#</source>
+                <target>Half-yearly </target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#form_evolnbevt_label#</source>
+                <target>Trend (%)</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>#form_nombreevt_label#</source>
+                <target>Number of fraud events</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>#form_typologie_label#</source>
+                <target>Fraud type</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>#form_montantbrut_label#</source>
+                <target>Gross amount (€)</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>#form_nbbqueprivees_label#</source>
+                <target>Private bank accounts</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>#form_export_btn#</source>
+                <target>Export</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>#form_evenement_btn#</source>
+                <target>Events</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>#form_totalnet_label#</source>
+                <target>Net total</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>#form_acquisition_label#</source>
+                <target>System acquiry</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>#form_pays_label#</source>
+                <target>Country</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>#form_montant_label#</source>
+                <target>Amount</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>#form_fraude_list#</source>
+                <target>Gross fraud amounts for %name% by type </target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>#form_activiteemission_label#</source>
+                <target>Issuing activity</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>#form_fraude_new_DAB_title#</source>
+                <target>DAB record creation</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>#form_fraude_edit_DAB_title#</source>
+                <target>DAB record edition</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>#form_evolminevt_label#</source>
+                <target>Trend (%)</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>#form_kri_btn#</source>
+                <target>KRI Results</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>#form_totalevt_label#</source>
+                <target>Total events</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>#form_evenement_label#</source>
+                <target>Events</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>#form_threshold_label#</source>
+                <target>Warning threshold</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>#form_fraude_show_DAB_title#</source>
+                <target>ATM record display</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>#form_fraude_show_CARTE_title#</source>
+                <target>CARD record display</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>#form_kri_label#</source>
+                <target>KRI</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>#form_valmaxevt_label#</source>
+                <target>Maximum event (€)</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>#form_datesaisie_label#</source>
+                <target>Data input day</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>#form_evolbrut_label#</source>
+                <target>Trend (%)</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>#form_totalevtmin_label#</source>
+                <target>Total minimum amount</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>#form_event_list#</source>
+                <target>Events related to this fraud record</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>#form_fraude_label#</source>
+                <target>Fraud types</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>#form_label_label#</source>
+                <target>Label</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>#form_evolnet_label#</source>
+                <target>Trend (%)</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>#form_totalevtmax_label#</source>
+                <target>Total maximum amount</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>#form_description_label#</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>#form_guidefraude_btn#</source>
+                <target>Guide</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>#form_fraude_new_TPE_title#</source>
+                <target>POS record creation</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>#form_filiale_label#</source>
+                <target>Subsidiary</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>#form_fraude_edit_CARTE_title#</source>
+                <target>CARD record edition</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>#form_fraude_edit_TPE_title#</source>
+                <target>TPE record edition</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

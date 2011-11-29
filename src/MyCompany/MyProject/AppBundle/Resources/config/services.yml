@@ -1,0 +1,6 @@
+# Services class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\services
+services: 
+  fraude:
+      class: MyCompany\MyProject\AppBundle\Services\FraudeManager
+      arguments: [argumentValeur]

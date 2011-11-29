@@ -1,0 +1,37 @@
+# Config validation class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\validation
+
+MyCompany\MyProject\AppBundle\Entity\FraudeRecord:
+   getters:	
+       MontantBrutValid:
+           - "True" : { message: "#constraint_ismontantbrutvalid_failed#" }			
+       EvolBrutValid:
+           - "True" : { message: "#constraint_isevolbrutvalid_failed#" }			
+       MontantNetValid:
+           - "True" : { message: "#constraint_ismontantnetvalid_failed#" }			
+       EvolNetValid:
+           - "True" : { message: "#constraint_isevolnetvalid_failed#" }			
+       ValMaxEvtValid:
+           - "True" : { message: "#constraint_isvalmaxevtvalid_failed#" }			
+       EvolMaxEvtValid:
+           - "True" : { message: "#constraint_isevolmaxevtvalid_failed#" }			
+       ValMinEvtValid:
+           - "True" : { message: "#constraint_isvalminevtvalid_failed#" }			
+       EvolMinEvtValid:
+           - "True" : { message: "#constraint_isevolminevtvalid_failed#" }			
+       NombreEvtValid:
+           - "True" : { message: "#constraint_isnombreevtvalid_failed#" }			
+       EvolNbEvtValid:
+           - "True" : { message: "#constraint_isevolnbevtvalid_failed#" }			
+
+MyCompany\MyProject\AppBundle\Entity\FraudeSaisie:
+   getters:	
+       PeriodeValid:
+           - "True" : { message: "#constraint_isperiodevalid_failed#" }			
+
+MyCompany\MyProject\AppBundle\Entity\FraudeEvenement:
+   getters:	
+       DateEvtValid:
+           - "True" : { message: "#constraint_isdateevtvalid_failed#" }			
+       MontantValid:
+           - "True" : { message: "#constraint_ismontantvalid_failed#" }			

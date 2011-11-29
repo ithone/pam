@@ -1,0 +1,12 @@
+# Config validation class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\validation
+
+MyCompany\MyProject\SysBundle\Entity\AdminUser:
+   properties:	
+        username:
+            - NotBlank: 
+                  message: Ce champ ne peut être à blanc
+            - NotNull: 
+                  message: Ce champ ne peut être null
+            - MaxLength: 
+                  limit: 10

@@ -1,0 +1,16 @@
+# Config Login routing service class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\navigation\login
+root:
+    pattern:   /
+    defaults:  { _controller: MyCompanyMyProjectSysBundle:Security:reroute } 
+#    defaults:  { _controller: MyCompanyMyProjectSysBundle:Security:reroute, target: homepage } 
+login:
+    pattern:   /login
+    defaults:  { _controller: MyCompanyMyProjectSysBundle:Security:init }
+loginlocale:
+    pattern:   /{_locale}/login
+    defaults:  { _controller: MyCompanyMyProjectSysBundle:login, 'locale': _locale  }
+login_check:
+    pattern:   /login_check
+_logout: 
+    pattern:   /logout

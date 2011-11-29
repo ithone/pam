@@ -1,0 +1,60 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/ViewPart/navbar.html.twig #}
+<div class="navbar">
+{% for main, top in navigation %}
+  {% if is_granted(top.role) %}
+  <div class="navtopaslink" id="{{ main }}"
+      onmouseover="this.className='navtopaslinkover';
+      document.getElementById('navtopcontainer').style.display='block';"         
+      onmouseout="this.className='navtopaslink';">
+      <a href="{% render 'MyCompanyMyProjectAppBundle:Navigation:get' with {'route': main, 'entry': top} %}">      
+	  {% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': top.title, 'domain': 'navigation' } %}
+      </a>
+   </div>	
+   <div class="navtopcontainer" id="navtopcontainer">	
+      {% for section, middle in top.navigation %}
+        {% if is_granted(middle.role) %}
+       	<div class="naventryaslink" id="{{ section }}"
+           onmouseover="this.className='naventryaslinkover';
+           document.getElementById('{{ section }}container').style.display='block';"
+           onmouseout="this.className='naventryaslink';">
+  		   <a href="{% render 'MyCompanyMyProjectAppBundle:Navigation:get' with {'route': section, 'entry': middle } %}">
+      	   {% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': middle.title, 'domain': 'navigation' } %}
+           </a>
+         </div>        
+		 <div class="naventrycontainer" id="{{ section }}container"
+		    onmouseover="document.getElementById('{{ section }}container').style.display='block';"
+			onmouseout="document.getElementById('{{ section }}container').style.display='none'">
+       		{% for page, bottom in middle.navigation %}
+        		{% if is_granted(bottom.role) %} 
+       			<div class="navleafaslink" id="{{ page }}"
+                  onmouseover="this.className='navleafaslinkover';
+				  document.getElementById('{{ page }}container').style.display='block';"
+                  onmouseout="this.className='navleafaslink';">
+  				  <a href="{% render 'MyCompanyMyProjectAppBundle:Navigation:get' with {'route': page, 'entry': bottom } %}">
+      			  {% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': bottom.title, 'domain': 'navigation' } %}      
+      			  </a>
+      			</div>
+                <div class="navleafcontainer" id="{{ page }}container"
+		           onmouseover="document.getElementById('{{ page }}container').style.display='block';"
+			       onmouseout="document.getElementById('{{ page }}container').style.display='none'">
+       		        {% for endpage, endbottom in bottom.navigation %}
+						{% if is_granted(endbottom.role) %} 
+       			        <div class="navniddleaslink" id="{{ endpage }}"
+                          onmouseover="this.className='navniddleaslinkover';"
+                          onmouseout="this.className='navniddleaslink';">
+  				          <a href="{% render 'MyCompanyMyProjectAppBundle:Navigation:get' with {'route': endpage, 'entry': endbottom } %}">
+      			          {% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': endbottom.title, 'domain': 'navigation' } %}     
+      			          </a>
+      			        </div>
+						{% endif %}
+					{% endfor %}
+				</div>	
+           	 	{% endif %}
+       		{% endfor %}
+         </div>
+         {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %} 
+{% endfor %}
+</div>

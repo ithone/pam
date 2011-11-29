@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#sys_nav_page101#</source>
+                <target>Define a language</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#sys_nav_section2#</source>
+                <target>Users management</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#sys_nav_main#</source>
+                <target>Admin home</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#sys_nav_page401#</source>
+                <target>Define a menu</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#sys_nav_page301#</source>
+                <target>Define a reference</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#sys_nav_section3#</source>
+                <target>Reference management</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#sys_nav_section0#</source>
+                <target>Role management</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#sys_nav_section4#</source>
+                <target>Menu management</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#sys_nav_section1#</source>
+                <target>Language management</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#sys_nav_page001#</source>
+                <target>Define a role</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#sys_nav_page0010#</source>
+                <target>third level</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#sys_nav_page201#</source>
+                <target>Define a user</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

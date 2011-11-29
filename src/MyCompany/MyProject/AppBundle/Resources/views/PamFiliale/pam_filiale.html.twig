@@ -1,0 +1,23 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamFiliale/pam_filiale.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle::base_app.html.twig' %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamFiliale.BlockTemplate.Header #}
+{% block header %}
+<div class="header" id="header">
+{% render "MyCompanyMyProjectAppBundle:View:header" %}
+</div>
+<div></div>
+{% endblock header %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamFiliale.BlockTemplate.Navbar #}
+{% block navbar %}
+{% render "MyCompanyMyProjectAppBundle:Navigation:create" %}
+{% endblock navbar %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamFiliale.BlockTemplate.Footer #}
+{% block footer %}
+<div class="footer" id="footer">
+{% render "MyCompanyMyProjectAppBundle:View:footer" %}
+</div>
+<div></div>
+{% endblock footer %}

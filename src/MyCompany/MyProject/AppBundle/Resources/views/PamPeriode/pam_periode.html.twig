@@ -1,0 +1,23 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamPeriode/pam_periode.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle::base_app.html.twig' %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamPeriode.BlockTemplate.Footer #}
+{% block footer %}
+<div class="footer" id="footer">
+{% render "MyCompanyMyProjectAppBundle:View:footer" %}
+</div>
+<div></div>
+{% endblock footer %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamPeriode.BlockTemplate.Header #}
+{% block header %}
+<div class="header" id="header">
+{% render "MyCompanyMyProjectAppBundle:View:header" %}
+</div>
+<div></div>
+{% endblock header %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.PamPeriode.BlockTemplate.Navbar #}
+{% block navbar %}
+{% render "MyCompanyMyProjectAppBundle:Navigation:create" %}
+{% endblock navbar %}

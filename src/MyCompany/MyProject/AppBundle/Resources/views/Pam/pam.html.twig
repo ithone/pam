@@ -1,0 +1,43 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/Pam/pam.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle::base_app.html.twig' %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Javascripts #}
+{% block javascripts %}
+<script src="{{ asset('/js/main.js') }}" type="text/javascript"></script>
+{% endblock javascripts %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Stylesheets #}
+{% block stylesheets %}
+{% stylesheets '@MyCompanyMyProjectAppBundle/Resources/public/css/*'  %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock stylesheets %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Footer #}
+{% block footer %}
+<div class="footer" id="footer">
+{% render "MyCompanyMyProjectAppBundle:View:footer" %}
+</div>
+<div></div>
+{% endblock footer %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Header #}
+{% block header %}
+<div class="header" id="header">
+{% render "MyCompanyMyProjectAppBundle:View:header" %}
+</div>
+<div></div>
+{% endblock header %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Navbar #}
+{% block navbar %}
+{% render "MyCompanyMyProjectAppBundle:Navigation:create" %}
+{% endblock navbar %}
+
+{# MyCompany.MyProject.AppBundle.Resources.views.Pam.BlockTemplate.Content #}
+{% block content %}
+<div class="content" id="content">
+{% render "MyCompanyMyProjectAppBundle:View:content" %}
+</div>
+<div></div>
+{% endblock content %}

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>?not_null?</source>
+                <target>This field can't be left null</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#constraint_ismontantbrutvalid_failed#</source>
+                <target>data input must be either global (1+2) or detailed (1) and (2)</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#constraint_isperiodevalid_failed#</source>
+                <target>wrong period, already in system</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#constraint_isnombreevtvalid_failed#</source>
+                <target>number of events entered is incorrect</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#constraint_isevolnetvalid_failed#</source>
+                <target>suspicious trend in regard of net amount provided</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#constraint_isevolnbevtvalid_failed#</source>
+                <target>invalid trend for number of events</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#constraint_isevolminevtvalid_failed#</source>
+                <target>invalid trend for minimum amount observed</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>?not_blank?</source>
+                <target>This field can't be left blanck</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#constraint_isvalmaxevtvalid_failed#</source>
+                <target>maximum amount for event is incorrect</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#constraint_isevolmaxevtvalid_failed#</source>
+                <target>invalid trend for maximum amount observed</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#constraint_isvalminevtvalid_failed#</source>
+                <target>minimum amount for event is incorrect</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#constraint_ismontantnetvalid_failed#</source>
+                <target>net amount valued provided is incorrect</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#constraint_isevolbrutvalid_failed#</source>
+                <target>suspicious trend in regard of gross amount provided</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

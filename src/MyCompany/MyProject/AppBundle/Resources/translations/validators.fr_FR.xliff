@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#constraint_isevolminevtvalid_failed#</source>
+                <target>évolution du montant minimal anormale</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>?not_blank?</source>
+                <target>Ce champ ne peut être blanc</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#constraint_isevolbrutvalid_failed#</source>
+                <target>évolution du montant brut anormale</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#constraint_isnombreevtvalid_failed#</source>
+                <target>le nombre d'évènements semble incorrect</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#constraint_ismontantbrutvalid_failed#</source>
+                <target>la saisie doit être soit globale (1+2) ou détaillée (1) et (2)</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#constraint_isevolnetvalid_failed#</source>
+                <target>évolution du montant net anormale</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#constraint_isevolnbevtvalid_failed#</source>
+                <target>évolution du nombre d'évènements anormale</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>?not_null?</source>
+                <target>Ce champ ne peut être nul</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#constraint_isvalminevtvalid_failed#</source>
+                <target>valeur minimale fournie invalide</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#constraint_isperiodevalid_failed#</source>
+                <target>la période choisie est déjà saisie</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#constraint_isvalmaxevtvalid_failed#</source>
+                <target>valeur maximale fournie invalide</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#constraint_isevolmaxevtvalid_failed#</source>
+                <target>évolution du montant maximal anormale</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#constraint_ismontantnetvalid_failed#</source>
+                <target>montant net incorrect vis-à-vis du montant brut</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#sys_main#</source>
+                <target>Accueil administration</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#sys_app#</source>
+                <target>Accueil application</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#sys_logout#</source>
+                <target>Déconnexion</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

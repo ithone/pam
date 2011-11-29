@@ -1,0 +1,7 @@
+parameters:
+#    my_company_my_project_test.example.class: MyCompany\MyProject\TestBundle\Example
+
+services:
+#    my_company_my_project_test.example:
+#        class: %my_company_my_project_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

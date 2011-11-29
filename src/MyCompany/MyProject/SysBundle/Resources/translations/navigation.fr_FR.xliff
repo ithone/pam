@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#sys_nav_page301#</source>
+                <target>Définir une référence</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#sys_nav_page101#</source>
+                <target>Définir une langue</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#sys_nav_page401#</source>
+                <target>Définir un menu</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#sys_nav_section3#</source>
+                <target>Gestion des références</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#sys_nav_section4#</source>
+                <target>Gestion des menus</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#sys_nav_section1#</source>
+                <target>Gestion des langues</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#sys_nav_main#</source>
+                <target>Accueil admin</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#sys_nav_page0010#</source>
+                <target>Troisième niveau</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#sys_nav_page201#</source>
+                <target>Définir un utilisateur</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#sys_nav_page001#</source>
+                <target>Définir un rôle</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#sys_nav_section2#</source>
+                <target>Gestion des utilisateurs</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#sys_nav_section0#</source>
+                <target>Gestion des rôles</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

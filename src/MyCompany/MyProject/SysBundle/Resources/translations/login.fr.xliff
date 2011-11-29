@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Send</source>
+                <target>Se connecter</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#login_title#</source>
+                <target>Bienvenue sur le site CBMT</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Password:</source>
+                <target>Mot de passe</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Username:</source>
+                <target>Code utilisateur</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

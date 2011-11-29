@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#pays_guinee_equatoriale#</source>
+                <target>Guinée équatoriale</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#pays_madagascar#</source>
+                <target>Madagascar</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#pays_slovaquie#</source>
+                <target>Slovaquie</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#app_pam_zone6#</source>
+                <target>Zone bassin méditerranéen</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#PFNEW001I#</source>
+                <target>PFNEW001I : Votre profil ne vous permet pas la création</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#PFIND001I#</source>
+                <target>PFIND001I : Il n'a pas de déclaration de fraude pour %name% </target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#app_pam_fraude_typo4#</source>
+                <target>Saisie globale (1+2)</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#app_pam_fraude_typo2#</source>
+                <target>Détournement de compte (1) </target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#pays_tunisie#</source>
+                <target>Tunisie</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#pays_macedoine#</source>
+                <target>Macédoine</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#znom4#</source>
+                <target>ASIE</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#app_pam_acq1#</source>
+                <target>Carte de paiement et de crédit</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#app_pam_fraude_typo5#</source>
+                <target>Cartes contrefaites</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#PFEDI001I#</source>
+                <target>PFEDI001I : Votre profil ne vous permet pas l'édition</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#pays_inde#</source>
+                <target>Inde</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#znom3#</source>
+                <target>AFRIQUE</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#2eme_semestre#</source>
+                <target>31 Décembre</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>#pays_tchad#</source>
+                <target>Tchad</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>#app_pam_fraude_typo1#</source>
+                <target>Cartes perdues et volées</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>#znom2#</source>
+                <target>EUROPE</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>#znom6#</source>
+                <target>MED</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>#pays_chine#</source>
+                <target>Chine</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>Label</source>
+                <target>Libellé</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>#pays_georgie#</source>
+                <target>Géorgie</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>#pays_antilles_francaises#</source>
+                <target>Antilles Françaises</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>Name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>#app_pam_zone4#</source>
+                <target>Zone asiatique</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>#pays_algerie#</source>
+                <target>Algérie</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>#app_pam_fraude_typo3#</source>
+                <target>Cartes non délivrées (2) </target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>#pays_grece#</source>
+                <target>Grèce</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>#pays_belarus#</source>
+                <target>Bélarus</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>#pays_chypre#</source>
+                <target>Chypre</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>#znom5#</source>
+                <target>OUTREMER</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>#pays_cameroun#</source>
+                <target>Cameroun</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>CARTE</source>
+                <target>CARTE</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>#pays_egypte#</source>
+                <target>Égypte</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>#pays_albanie#</source>
+                <target>Albanie</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>#pays_polynesie_francaise#</source>
+                <target>Polynésie Française</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>#app_pam_acq2#</source>
+                <target>Distributeur Automatique de Billets</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>TPE</source>
+                <target>TPE</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>#app_pam_zone2#</source>
+                <target>Zone européenne</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>#pays_guinee#</source>
+                <target>Guinée</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>#app_pam_zone3#</source>
+                <target>Zone africaine</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>#pays_jordanie#</source>
+                <target>Jordanie</target>
+            </trans-unit>
+            <trans-unit id="45">
+                <source>#pays_ghana#</source>
+                <target>Ghana</target>
+            </trans-unit>
+            <trans-unit id="46">
+                <source>#pays_reunion#</source>
+                <target>Ile de la Réunion</target>
+            </trans-unit>
+            <trans-unit id="47">
+                <source>#pays_maroc#</source>
+                <target>Maroc</target>
+            </trans-unit>
+            <trans-unit id="48">
+                <source>#app_pam_zone1#</source>
+                <target>Zone adriatique</target>
+            </trans-unit>
+            <trans-unit id="49">
+                <source>#app_pam_fraude_typo6#</source>
+                <target>Autres actions frauduleuses</target>
+            </trans-unit>
+            <trans-unit id="50">
+                <source>#pays_roumanie#</source>
+                <target>Roumanie</target>
+            </trans-unit>
+            <trans-unit id="51">
+                <source>#1er_semestre#</source>
+                <target>30 Juin</target>
+            </trans-unit>
+            <trans-unit id="52">
+                <source>Zone</source>
+                <target>Région</target>
+            </trans-unit>
+            <trans-unit id="53">
+                <source>#PEIND001I#</source>
+                <target>PEIND001I : Il n'y a pas d'évènements attachés à cette déclaration</target>
+            </trans-unit>
+            <trans-unit id="54">
+                <source>Pays</source>
+                <target>Pays</target>
+            </trans-unit>
+            <trans-unit id="55">
+                <source>#pays_viet_nam#</source>
+                <target>Viêt Nam</target>
+            </trans-unit>
+            <trans-unit id="56">
+                <source>DAB</source>
+                <target>DAB</target>
+            </trans-unit>
+            <trans-unit id="57">
+                <source>#pays_republique_tcheque#</source>
+                <target>République Tchèque</target>
+            </trans-unit>
+            <trans-unit id="58">
+                <source>#znom1#</source>
+                <target>ADRIA</target>
+            </trans-unit>
+            <trans-unit id="59">
+                <source>#pays_liban#</source>
+                <target>Liban</target>
+            </trans-unit>
+            <trans-unit id="60">
+                <source>#pays_cote_d_ivoire#</source>
+                <target>Côte d'Ivoire</target>
+            </trans-unit>
+            <trans-unit id="61">
+                <source>#pays_burkina_faso#</source>
+                <target>Burkina Faso</target>
+            </trans-unit>
+            <trans-unit id="62">
+                <source>#app_pam_zone5#</source>
+                <target>Zone outremer</target>
+            </trans-unit>
+            <trans-unit id="63">
+                <source>#pays_bulgarie#</source>
+                <target>Bulgarie</target>
+            </trans-unit>
+            <trans-unit id="64">
+                <source>#pays_russie#</source>
+                <target>Russie</target>
+            </trans-unit>
+            <trans-unit id="65">
+                <source>#pays_benin#</source>
+                <target>Bénin</target>
+            </trans-unit>
+            <trans-unit id="66">
+                <source>#pays_serbie#</source>
+                <target>Serbie</target>
+            </trans-unit>
+            <trans-unit id="67">
+                <source>Currency</source>
+                <target>Monnaie</target>
+            </trans-unit>
+            <trans-unit id="68">
+                <source>#pays_croatie#</source>
+                <target>Croatie</target>
+            </trans-unit>
+            <trans-unit id="69">
+                <source>#pays_montenegro#</source>
+                <target>Monténégro</target>
+            </trans-unit>
+            <trans-unit id="70">
+                <source>#pays_mauritanie#</source>
+                <target>Mauritanie</target>
+            </trans-unit>
+            <trans-unit id="71">
+                <source>#app_pam_acq3#</source>
+                <target>Terminal de Paiement Électronique</target>
+            </trans-unit>
+            <trans-unit id="72">
+                <source>#pays_senegal#</source>
+                <target>Sénégal</target>
+            </trans-unit>
+            <trans-unit id="73">
+                <source>#pays_nouvelle_caledonie#</source>
+                <target>Nouvelle Calédonie</target>
+            </trans-unit>
+            <trans-unit id="74">
+                <source>#pays_slovenie#</source>
+                <target>Slovénie</target>
+            </trans-unit>
+            <trans-unit id="75">
+                <source>#pays_moldavie#</source>
+                <target>Moldavie</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

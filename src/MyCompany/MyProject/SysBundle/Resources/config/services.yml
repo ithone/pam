@@ -1,0 +1,10 @@
+# Services class generated automatically by MDA process
+# MyCompany\MyProject\SysBundle\Resources\config\services
+services: 
+  journal:
+      class: MyCompany\MyProject\SysBundle\Services\JournalManager
+      arguments: [argumentValeur]
+
+  habilitation:
+      class: MyCompany\MyProject\SysBundle\Services\HabilitationManager
+      arguments: [argumantValeur]

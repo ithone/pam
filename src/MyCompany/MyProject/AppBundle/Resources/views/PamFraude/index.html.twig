@@ -1,0 +1,196 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamFraude/index.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamFraude:pam_fraude.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+function f(valeur){ 
+	if (isNaN(valeur.split(' ').join(''))){alert('num�rique svp'); return false;} 
+	var val=new Array(); var tempval=valeur.split('.'); valeur=tempval[0].split(' ').join('')
+	valeur=valeur.split('').reverse(); var i=0;
+	while(i<valeur.length){ 
+ 		val.push( (valeur[i+2]?valeur[i+2]:'') + (valeur[i+1]?valeur[i+1]:'') + valeur[i] );
+ 		i=i+3;
+	} 
+	val=val.reverse().join(' ') +( tempval[1]?tempval[1].length>0?'.'+tempval[1]:'':'');
+	document.write(val + " {{ 'EUR' | trans }}");
+}
+function p(valeur){ 
+	document.write((valeur * 100) + ' %');
+}
+</script>
+<div class="content">
+{% if is_granted('ROLE_INDEX') %}
+<div class="leftpadding" id="leftpadding"></div>
+<div class="indexcontent">
+{% set title = '#form_fraude_list#'| trans([], 'labels') | replace({'%name%': name,'%action%': action, '%scope%': scope})%}
+<h1>{{ title | trans([], 'labels') }}</h1>
+<div class="tableindex" id="tableindex">
+    <table >
+      <thead>
+        <div class="tableindextitle" id="tableindextitle">
+        <tr>
+			{% if is_granted('ROLE_SHOW') %}
+            <div class="indextitleactions" id="indextitleactions"><th rowspan="0"><acronym class="help" id="help" title="{{ '#form_actions_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_actions_label#', 'domain': 'labels' } %}</acronym></th></div>
+			{% endif %}
+			<div class="indextitleitem" id="indextitlezone"><th rowspan="0"><acronym class="help" id="help" title="{{ '#form_zone_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_zone_label#', 'domain': 'labels' } %}</acronym></th></div>
+			<div class="indextitleitem" id="indextitlefiliale"><th rowspan="0"><acronym class="help" id="help" title="{{ '#form_filiale_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_filiale_label#', 'domain': 'labels' } %}</acronym></th></div>
+			<div class="indextitleitem" id="indextitleannee"><th rowspan="0"><acronym class="help" id="help" title="{{ '#form_annee_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_annee_label#', 'domain': 'labels' } %}</acronym></th></div>
+			<div class="indextitleitem" id="indextitlesemestre"><th rowspan="0"><acronym class="help" id="help" title="{{ '#form_semestre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_semestre_label#', 'domain': 'labels' } %}</acronym></th></div>
+			<div class="indextitleitem" id="indextitletypologie"><th colspan="0"><acronym class="help" id="help" title="{{ '#form_typologie_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_typologie_label#', 'domain': 'labels' } %}</acronym></th></div>
+		</tr>
+		<tr>
+		{% set header = 1 %}
+		{% set depth = 6 %}
+		{% set cnt = 1 %}	
+		{% for entity in entities %}
+  			{% if cnt < depth+1 %}
+				
+				
+				
+<div class="indextitleitem" id="indextitle{{ cnt }}"><td><acronym class="help" id="help" title="{{ entity.typologie | trans([], 'help') }}">{{ entity.typologie | trans }}</acronym></td></div>  				{% set cnt = cnt + 1 %}  		
+  			{% endif %}		
+		{% endfor %} 
+		</tr>
+		</div>
+	</thead>
+	   <tbody>		
+		{% set depth = 6 %}
+		{% set cnt = 1 %}
+		{% set flg = '1' %}	
+		{% set flag = '1' %}
+		<div class="evenlineindex"> 
+		<tr class="evenrow">
+		{% for entity in entities %}
+  			{% if cnt > depth %}
+  				{% set flg = '1' %}
+  				{% set cnt = 1 %}
+  				{% if flag is odd %}
+         			<div class="oddlineindex"> 
+        			<tr class="oddrow">
+          			{% set flag = '2' %} 	
+        		{% else %}       
+         			<div class="evenlineindex">
+        			<tr class="evenrow">
+          			{% set flag = '1' %}		
+        	{% endif %}	
+  			{%endif %}
+  			{% if cnt == 1 %}
+				<div class="actionsindex" id="actionsindex">
+				{% if is_granted('ROLE_SHOW') %}	   
+            		<td>
+                	<div class="action" id="showaction">
+						<acronym class="help" id="help" title="{{ '#form_show_help#' | trans([], 'help') }}"> 	
+                        <a class="buttonaslink" id="showaction" href="{{ path(path, { 'id': entity.saisie.id, 'name': name, 'action': 'show' }) }}"
+                            onmouseover="this.className='buttonaslinkover';"
+                            onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_show_btn#', 'domain': 'labels' } %}]</a>
+						</acronym>
+	               	</div> 
+					{% if is_granted('ROLE_EDIT') %}
+                		<div class="action" id="editaction">
+							<acronym class="help" id="help" title="{{ '#form_edit_help#' | trans([], 'help') }}">
+                        	<a class="buttonaslink" id="editaction" href="{{path(path, { 'id': entity.saisie.id, 'name': name, 'action': 'edit' }) }}"
+                            	onmouseover="this.className='buttonaslinkover';"
+                            	onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_edit_btn#', 'domain': 'labels' } %}]</a>
+							</acronym>
+                		</div>
+					{% endif %}
+					{% if is_granted('ROLE_DELETE') %}
+						{% set path = path|join('_post') %}	
+<SCRIPT language=javascript>
+	function demandeConfirmation() {
+		var answer = confirm("{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_conf_delete_label#', 'domain': 'labels' } %}")
+			if (answer)
+				window.location="{{ path(path, { 'id': entity.saisie.id, 'name': name, 'action': 'delete', 'method': 'POST' })  }}";
+	}
+</SCRIPT>
+                		<div class="action" id="deleteaction">
+							<acronym class="help" id="help" title="{{ '#form_delete_help#' | trans([], 'help') }}">
+                        	<a class="buttonaslink" id="deleteaction" href="#" onClick="demandeConfirmation();return false"
+                            	onmouseover="this.className='buttonaslinkover';"
+                            	onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_delete_btn#', 'domain': 'labels' } %}]</a>
+ 							</acronym>
+	               		</div>
+					{% endif %}
+            		</td> 
+				{% endif %}
+            	</div>
+			{% endif %}		
+  			{% if flg is odd %}	
+				
+				
+				
+<td class="item" id="item">{{ entity.saisie.systeme.filiale.zone | trans }}</td>				
+				
+				
+<td class="item" id="item">{{ entity.saisie.systeme.filiale | trans }}</td>				
+				
+				
+<td class="item" id="item">{{ entity.saisie.periode.annee | trans }}</td>				
+				
+				
+<td class="item" id="item">{{ entity.saisie.periode.semestre | trans }}</td>			{% endif %}
+				
+				<td class="money" id="money" ><div class="data" id="data"><script>f("{{ entity.montantBrut | trans }}")</script></div><div class="padding" id="padding"></div></td>
+				
+			{% if flg is odd %}
+				{% set flg = '2'%}
+			{% endif %}
+  			{% set cnt = cnt + 1 %}
+  			{% if cnt > depth %}
+  				</div>
+  				</tr>		
+  			{% endif %}
+		{% endfor %} 
+		</tbody>	
+</table>
+</div>
+<div class="commands" id="commands">
+{% if is_granted('ROLE_EXPORT') %}
+   <div class="command" id="exportcommand">	
+		<acronym class="help" id="help" title="{{ '#form_export_help#' | trans([], 'help') }}">
+		{% set path = path|join('export') %}			
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'export' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="exportaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_export_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>	
+   </div>
+{% endif %}
+{% if is_granted('ROLE_NEW') %}
+   <div class="command" id="newcommand">	
+		<acronym class="help" id="help" title="{{ '#form_new_help#' | trans([], 'help') }}">
+		{% set path = path|join('new') %}			
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'new' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="newaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_new_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>	
+   </div>
+{% endif %}
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_INDEX')) %}
+<div class="infomessage" id="infomessage">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_not_authorized#', 'domain': 'system' } %}
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*[_](.*)[_].*$");
+	re2 = new RegExp("^.*[_].*[_](.*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "INDEX";
+	s4 = "0000000" + "{{ id }}"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("{{ path }}");
+</script>
+</div>
+</div>
+{% endblock content%}

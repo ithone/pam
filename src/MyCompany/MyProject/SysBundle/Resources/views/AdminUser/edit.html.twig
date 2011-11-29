@@ -1,0 +1,79 @@
+{# MyCompany/MyProject/SysBundle/Resources/views/AdminUser/edit.html.twig/] #}
+{% extends 'MyCompanyMyProjectSysBundle:AdminUser:admin_user.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+function f(valeur){ 
+	if (isNaN(valeur.split(' ').join(''))){alert('num�rique svp'); return false;} 
+	var val=new Array(); var tempval=valeur.split('.'); valeur=tempval[0].split(' ').join('')
+	valeur=valeur.split('').reverse(); var i=0;
+	while(i<valeur.length){ 
+ 		val.push( (valeur[i+2]?valeur[i+2]:'') + (valeur[i+1]?valeur[i+1]:'') + valeur[i] );
+ 		i=i+3;
+	} 
+	val=val.reverse().join(' ') +( tempval[1]?tempval[1].length>0?'.'+tempval[1]:'':'');
+	document.write(val)
+}
+function p(valeur){ 
+	document.write((valeur * 100) + ' %');
+}
+</script>
+<div class="content">
+{% if is_granted('ROLE_EDIT') %}
+<div class="leftpadding"></div>
+<div class="editcontent">
+<h1>{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': '#form_edit_title#', 'domain': 'labels' } %}AdminUser</h1>
+<div class="editform" id="editform">
+  <form action="{{ path('mycompany_myproject_sysbundle_admin_user_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+     <div class="command" id="savecommand">	   
+       <button name="save" type=submit class="buttonaslink" id="saveaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': '#form_save_btn#', 'domain': 'labels' } %}</button>
+      </div>	
+      {{ form_widget(edit_form) }}
+  </form>	
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="backcommand">
+        <form class="command" id="backform" action="{{ path('mycompany_myproject_sysbundle_admin_user') }}" method="get">
+            <button name="back" type=submit class="buttonaslink" id="backaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': '#form_back_btn#', 'domain': 'labels' } %}</button>
+        </form>
+   </div>
+   <div class="command" id="deletecommand">
+		{% if is_granted('ROLE_DELETE') %}
+        <form class="command" id="deletecommand" action="{{ path('mycompany_myproject_sysbundle_admin_user_delete', { 'id': entity.id }) }}" method="post">
+            <button name="delete" type=submit class="buttonaslink" id="deleteaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectSysBundle:View:translate' with {'text': '#form_delete_btn#', 'domain': 'labels' } %}</button>
+            {{ form_widget(delete_form) }}
+        </form>
+		{% endif %}
+   </div>  
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_EDIT')) %}
+<div class="infomessage" id="infomessage">
+Vous n'�tes pas autoris�(e) � utliser cette fonction!<br>
+Adressez-vous � l'administrateur de l'application
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*([A-Z].*)[A-Z].*$");
+	re2 = new RegExp("^.*[A-Z].*([A-Z].*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "INDEX";
+	s4 = "0000000"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("AdminUser");
+</script>
+</div>
+</div>
+{% endblock content%}

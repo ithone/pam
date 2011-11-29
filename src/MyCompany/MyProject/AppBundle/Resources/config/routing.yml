@@ -1,0 +1,131 @@
+# Config routing class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\routing
+MyCompanyMyProjectAppBundleEntities:
+    resource: "@MyCompanyMyProjectAppBundle/Resources/Config/entities.yml"
+    prefix:   /
+MyCompanyMyProjectAppBundleLogin:
+    resource: "@MyCompanyMyProjectAppBundle/Resources/Config/login.yml"
+    prefix:   /
+
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0016
+mycompany_myproject_appbundle_page0016:
+   pattern:  /{_locale}/pam/config/system/systeme
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamSysteme:index, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0015
+mycompany_myproject_appbundle_page0015:
+   pattern:  /{_locale}/pam/config/system/zone
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamZone:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page101
+mycompany_myproject_appbundle_page101:
+   pattern:  /{_locale}/pam/fraude/dab
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:fraude, name: DAB, action: index, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page002
+mycompany_myproject_appbundle_page002:
+   pattern:  /{_locale}/pam/config/fraude
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamConfig:fraude, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0011
+mycompany_myproject_appbundle_page0011:
+   pattern:  /{_locale}/pam/config/system/semestre
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamSemestre:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0017
+mycompany_myproject_appbundle_page0017:
+   pattern:  /{_locale}/pam/config/system/fililale
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamFiliale:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0013
+mycompany_myproject_appbundle_page0013:
+   pattern:  /{_locale}/pam/config/system/acquisition
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamAcquisition:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page001
+mycompany_myproject_appbundle_page001:
+   pattern:  /{_locale}/pam/config/system
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamConfig:system, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page102
+mycompany_myproject_appbundle_page102:
+   pattern:  /{_locale}/pam/fraude/carte
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:fraude, name: CARTE, action: index, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0012
+mycompany_myproject_appbundle_page0012:
+   pattern:  /{_locale}/pam/config/system/periode
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamPeriode:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0010
+mycompany_myproject_appbundle_page0010:
+   pattern:  /{_locale}/pam/config/system/annee
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamAnnee:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0020
+mycompany_myproject_appbundle_page0020:
+   pattern:  /{_locale}/pam/config/fraude/typologie
+   defaults: { _controller: MyCompanyMyProjectAppBundle:FraudeTypologie:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page103
+mycompany_myproject_appbundle_page103:
+   pattern:  /{_locale}/pam/fraude/tpe
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:fraude, name: TPE, action: index, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\section1
+mycompany_myproject_appbundle_section1:
+   pattern:  /{_locale}/pam/fraude
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:fraude, name: DAB, action: 'welcome', _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\page0014
+mycompany_myproject_appbundle_page0014:
+   pattern:  /{_locale}/pam/config/system/pays
+   defaults: { _controller: MyCompanyMyProjectAppBundle:PamPays:index, scope: ANY, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\section0
+mycompany_myproject_appbundle_section0:
+   pattern:  /{_locale}/pam/config
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:init, name: home, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU
+# Config routing service class generated automatically by MDA process
+# MyCompany\MyProject\AppBundle\Resources\config\navigation\pam
+_pam:
+   pattern: /pam
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:init }
+mycompany_myproject_appbundle_pam:
+   pattern:  /{_locale}/home
+   defaults: { _controller: MyCompanyMyProjectAppBundle:Pam:init, name: home, _locale: fr_FR}
+   requirements:
+      _locale: en_US|fr_FR|ru_RU

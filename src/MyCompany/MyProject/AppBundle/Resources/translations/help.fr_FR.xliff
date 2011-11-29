@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>#form_edit_help#</source>
+                <target>Éditer un enregistrement pour le modifier.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>#form_delete_help#</source>
+                <target>Supprimer un enregistrement. Une confirmation est demandée.</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>#form_totalevt_help#</source>
+                <target>Total des événements recensés.</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>#app_pam_fraude_typo4#</source>
+                <target>Détournement de compte +  Cartes non délivrées</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>#form_show_help#</source>
+                <target>Afficher le détail d'un enregistrement.</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>#form_nbbqueprivees_help#</source>
+                <target>Nombre de comptes en banque privés.</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>#form_enter_help#</source>
+                <target>Modifier les données sur le serveur. Celles-ci ne sont pas enregistrées sur la base.</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>#form_montantbrut_help#</source>
+                <target>Montant brut</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>#form_filiale_help#</source>
+                <target>Filiale</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>#form_typologie_help#</source>
+                <target>Type de fraude</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>#form_update_help#</source>
+                <target>Modifier les données sur le serveur. Celles-ci ne sont pas enregistrées sur la base.</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>#form_totalbrut_help#</source>
+                <target>Total des montants bruts.</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>#form_evolnet_help#</source>
+                <target>Évolution du montant net par rapport à la même période précédente (année-1/semestre).</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>#app_pam_fraude_typo1#</source>
+                <target>Cartes perdues et volées</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>#app_pam_fraude_typo2#</source>
+                <target>Détournement de compte: souscription d’un produit carte avec des données falsifiées.</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>#form_cancel_help#</source>
+                <target>Annulation des opérations de saisie. Les valeurs initiales sont restituées. </target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>#form_montantnet_help#</source>
+                <target>Fraude nette = Fraude brute moins chargebacks</target>
+            </trans-unit>
+            <trans-unit id="18">
+                <source>#form_semestre_help#</source>
+                <target>Semestre</target>
+            </trans-unit>
+            <trans-unit id="19">
+                <source>#form_evenement_help#</source>
+                <target>Accès à l'écran des évènements liés à ces données de fraude. Les opérations disponibles dépendent du niveau d'habilitation.</target>
+            </trans-unit>
+            <trans-unit id="20">
+                <source>#form_kri_help#</source>
+                <target>Accès à l'écran de la grille Kri. Les opérations disponibles dépendent du niveau d'habilitation.</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>#form_back_help#</source>
+                <target>Retour à l'écran précédent (dépend du contexte).</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>#form_evolmaxevt_help#</source>
+                <target>Évolution du montant maximum observé par rapport à la même période précédente (année-1/semestre).</target>
+            </trans-unit>
+            <trans-unit id="23">
+                <source>#app_pam_fraude_typo3#</source>
+                <target>Carte non livrée : la carte aurait du être livrée par courrier mais le client déclare ne pas l’avoir reçue.</target>
+            </trans-unit>
+            <trans-unit id="24">
+                <source>#app_pam_fraude_typo7#</source>
+                <target>Carte non présente : VAD, e-commerce, …</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>#form_save_help#</source>
+                <target>Cette action modifie l'enregistrement sur la base. Une confirmation est demandée.</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>#form_valminevt_help#</source>
+                <target>Minimum observé(€)</target>
+            </trans-unit>
+            <trans-unit id="27">
+                <source>#form_valmaxevt_help#</source>
+                <target>Maximum observé (€)</target>
+            </trans-unit>
+            <trans-unit id="28">
+                <source>#form_evolnbevt_help#</source>
+                <target>Évolution du montant nombre d'évènements par rapport à la même période précédente (année-1/semestre).</target>
+            </trans-unit>
+            <trans-unit id="29">
+                <source>#form_annee_help#</source>
+                <target>Année</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>#form_zone_help#</source>
+                <target>Région</target>
+            </trans-unit>
+            <trans-unit id="31">
+                <source>#form_totalnet_help#</source>
+                <target>Total des montants nets.</target>
+            </trans-unit>
+            <trans-unit id="32">
+                <source>#form_total_activites_help#</source>
+                <target>Toutes typologies de fraude confondues.</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>#form_actions_help#</source>
+                <target>Actions autorisées par ce profil d'utilisateur.</target>
+            </trans-unit>
+            <trans-unit id="34">
+                <source>#form_evolminevt_help#</source>
+                <target>Évolution du montant minimum observé par rapport à la même période précédente (année-1/semestre).</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>#form_totalevtmin_help#</source>
+                <target>Total des montants minimum.</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>#form_totalevtmax_help#</source>
+                <target>Total des montants maximum.</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>#form_nombreevt_help#</source>
+                <target>Nombre d'évènements</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>#form_evolbrut_help#</source>
+                <target>Évolution du montant brut par rapport à la même période précédente (année-1/semestre).</target>
+            </trans-unit>
+            <trans-unit id="39">
+                <source>#app_pam_fraude_typo5#</source>
+                <target>Cartes contrefaites</target>
+            </trans-unit>
+            <trans-unit id="40">
+                <source>#form_new_help#</source>
+                <target>Ouvrir un écran pour création d'un nouvel enregistrement.</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>#form_create_help#</source>
+                <target>Cette action crée l'enregistrement sur la base. Une confirmation est demandée.</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>#form_acquisition_help#</source>
+                <target>Type de système d'acquisition.</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>#app_pam_fraude_typo6#</source>
+                <target>Actions frauduleuses : usage malveillant de documents volés pour ouvrir un compte à la place de quelqu’un d’autre.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

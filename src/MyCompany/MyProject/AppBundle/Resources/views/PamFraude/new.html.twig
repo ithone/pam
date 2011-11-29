@@ -1,0 +1,245 @@
+{# MyCompany/MyProject/AppBundle/Resources/views/PamFraude/new.html.twig #}
+{% extends 'MyCompanyMyProjectAppBundle:PamFraude:pam_fraude.html.twig' %}
+{% block content %}
+<div class="content">
+{% if is_granted('ROLE_NEW') %}
+<div class="leftpadding" id="leftpadding"></div>
+<div class="indexcontent" id="indexcontent">
+{% set title = '#form_fraude_new_%name%_title#'| trans([], 'labels') | replace({'%name%': name,'%action%': action, '%scope%': scope})%}
+<h1>{{ title | trans([], 'labels') }}</h1>
+{% if form.vars.errors|length>0 %}
+	{% set cnt = 1 %}
+	{% for msg in form.vars.errors %}
+		{% if cnt==1 %}
+			{% set message = msg.getMessageTemplate %}	 
+			<div class="errors" id="errors">{{ error | trans | trans([], 'labels')}}:  {{ message|trans([], 'validators') }}</div>
+			{% set cnt = 2 %}
+		{% endif %}	
+	{% endfor %}
+{% endif %}
+<div class="tableindex" id="tableindex">
+{% set path = path|join('_post') %}				
+<form name="formnew" onsubmit="return onSubmitForm();" method="post" {{ form_enctype(form) }}>	
+<table>
+	<tr>
+	<table>
+		<tr>
+				<div class="indextitleitem" id="indextitlefiliale">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_filiale_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_filiale_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.systeme.filiale | trans }}</td>
+				<div class="indextitleitem" id="indextitleacquisition">
+				<th align="right"><acronym class="help" id="help" title="{{ '#form_acquisition_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_acquisition_label#', 'domain': 'labels' } %}</acronym></th></div>
+				<td align="left">: {{ form.vars.value.systeme.acquisition | trans }}</td>
+					<div class="indextitleitem" id="indextitleannee">
+						<th align="right"><acronym class="help" id="help" title="{{ '#form_annee_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_annee_label#', 'domain': 'labels' } %}</acronym></th>
+						<td align="left">: {{ form_widget(form.periode.annee) }}</td>
+					</div>
+					<div class="indextitleitem" id="indextitlesemestre">
+						<th align="right"><acronym class="help" id="help" title="{{ '#form_semestre_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_semestre_label#', 'domain': 'labels' } %}</acronym></th>
+						<td align="left">: {{ form_widget(form.periode.semestre) }}</td>
+					</div>
+					<div class="indextitleitem" id="indextitlenbbqueprivees">
+						<th align="right"><acronym class="help" id="help" title="{{ '#form_nbbqueprivees_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_nbbqueprivees_label#', 'domain': 'labels' } %}</acronym></th>
+						<td align="left">: {{ form_widget(form.nbBquePrivees) }}</td>
+					</div>
+		</tr>
+	</table>
+	</tr>
+	<tr>
+	<table>
+   		<thead>	
+   			<div class="tableindextitle" id="tableindextitle">
+  	  			<tr>
+						<div class="indextitleitem" id="indextitletypologie"><acronym class="help" id="help" title="{{ '#form_typologie_help#' | trans([], 'help') }}"><th width="50">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_typologie_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlemontantbrut"><th width="50"><acronym class="help" id="help" title="{{ '#form_montantbrut_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_montantbrut_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitleevolbrut"><th width="50"><acronym class="help" id="help" title="{{ '#form_evolbrut_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evolbrut_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlemontantnet"><th width="50"><acronym class="help" id="help" title="{{ '#form_montantnet_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_montantnet_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitleevolnet"><th width="50"><acronym class="help" id="help" title="{{ '#form_evolnet_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evolnet_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlevalmaxevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_valmaxevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_valmaxevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitleevolmaxevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_evolmaxevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evolmaxevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlevalminevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_valminevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_valminevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitleevolminevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_evolminevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evolminevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitlenombreevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_nombreevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_nombreevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+							<div class="indextitleitem" id="indextitleevolnbevt"><th width="50"><acronym class="help" id="help" title="{{ '#form_evolnbevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evolnbevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+					{% if is_granted('ROLE_ENTER') %}
+            			<div class="indextitleactions" id="indextitleactions"><th width="50"><acronym class="help" id="help" title="{{ '#form_actions_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_actions_label#', 'domain': 'labels' } %}</acronym></th></div>
+					{% endif %}	
+	  			</tr>
+			</div>
+		</thead>
+		<tbody>
+			{% if form is not null %}
+				{% for row in form.fraude %}
+					<div class="evenlineindex">
+					<tr class="evenrow">
+							<td><acronym class="help" id="help" title="{{ row.vars.value.typologie | trans([], 'help') }}">{{ row.vars.value.typologie | trans }}</acronym></td>
+								<td>{{ form_errors(row.montantBrut) }}{{ form_widget(row.montantBrut) }}</td>
+								<td>{{ form_errors(row.evolBrut) }}{{ form_widget(row.evolBrut) }}</td>
+								<td>{{ form_errors(row.montantNet) }}{{ form_widget(row.montantNet) }}</td>
+								<td>{{ form_errors(row.evolNet) }}{{ form_widget(row.evolNet) }}</td>
+								<td>{{ form_errors(row.valMaxEvt) }}{{ form_widget(row.valMaxEvt) }}</td>
+								<td>{{ form_errors(row.evolMaxEvt) }}{{ form_widget(row.evolMaxEvt) }}</td>
+								<td>{{ form_errors(row.valMinEvt) }}{{ form_widget(row.valMinEvt) }}</td>
+								<td>{{ form_errors(row.evolMinEvt) }}{{ form_widget(row.evolMinEvt) }}</td>
+								<td>{{ form_errors(row.nombreEvt) }}{{ form_widget(row.nombreEvt) }}</td>
+								<td>{{ form_errors(row.evolNbEvt) }}{{ form_widget(row.evolNbEvt) }}</td>
+						{% if is_granted('ROLE_ENTER') %}											
+							<td>
+           					<div class="actionsindex" id="actionsindex">
+     							<div class="action" id="enteraction">
+									<acronym class="help" id="help" title="{{ '#form_enter_help#' | trans([], 'help') }}">	   
+       								<button name="operation" type=submit class="buttonaslink" id="enteraction"
+										onclick="document.pressed=this.value" value="enter"
+            							onmouseover="this.className='buttonaslinkover';"
+            							onmouseout="this.className='buttonaslink';">[{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_enter_btn#', 'domain': 'labels' } %}]</button>
+									</acronym>
+      							</div>
+							</div>
+							</td>
+						{% endif %}
+					</tr>
+					</div>
+				{% endfor %} 				
+			{% endif %}
+		</tbody>
+		<thead>
+				<div class="indextitleitem" id="indextitletotal_activites"><th><acronym class="help" id="help" title="{{ '#form_total_activites_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_total_activites_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<div class="indextitleitem" id="indextitletotalbrut"><th><acronym class="help" id="help" title="{{ '#form_totalbrut_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_totalbrut_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<th></th>
+					<div class="indextitleitem" id="indextitletotalnet"><th><acronym class="help" id="help" title="{{ '#form_totalnet_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_totalnet_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<th></th>
+					<div class="indextitleitem" id="indextitletotalevtmax"><th><acronym class="help" id="help" title="{{ '#form_totalevtmax_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_totalevtmax_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<th></th>
+					<div class="indextitleitem" id="indextitletotalevtmin"><th><acronym class="help" id="help" title="{{ '#form_totalevtmin_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_totalevtmin_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<th></th>
+					<div class="indextitleitem" id="indextitletotalevt"><th><acronym class="help" id="help" title="{{ '#form_totalevt_help#' | trans([], 'help') }}">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_totalevt_label#', 'domain': 'labels' } %}</acronym></th></div>
+					<th></th>
+			{% if is_granted('ROLE_ENTER') %}
+			<th></th>	
+			{% endif %}		
+		</thead>
+		<tbody>
+			<div class="oddlineindex">
+			<tr class="oddrow">
+					<td></td>
+						<td>{{ form_errors(form.totalBrut) }}{{ form_widget(form.totalBrut) }}</td>
+						<td></td>
+						<td>{{ form_errors(form.totalNet) }}{{ form_widget(form.totalNet) }}</td>
+						<td></td>
+						<td>{{ form_errors(form.totalEvtMax) }}{{ form_widget(form.totalEvtMax) }}</td>
+						<td></td>
+						<td>{{ form_errors(form.totalEvtMin) }}{{ form_widget(form.totalEvtMin) }}</td>
+						<td></td>
+						<td>{{ form_errors(form.totalEvt) }}{{ form_widget(form.totalEvt) }}</td>
+						<td></td>
+				{% if is_granted('ROLE_ENTER') %}
+				<td></td>	
+				{% endif %}
+			</tr>	
+			</div>
+		</tbody>
+	</table>	
+	</tr>
+	{{ form_row(form._token) }}
+</table>
+	{% set path = path|join('_post') %}	
+     <div class="command" id="createcommand">
+	   <acronym class="help" id="help" title="{{ '#form_create_help#' | trans([], 'help') }}">		   
+       <button name="operation" type=submit class="buttonaslink" id="createaction"
+			onclick="document.pressed=this.value" value="create"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_create_btn#', 'domain': 'labels' } %}</button>
+		</acronym>
+      </div>	
+</form>	
+</div>
+<div class="commands" id="commands">
+   <div class="command" id="backcommand">
+		<acronym class="help" id="help" title="{{ '#form_back_help#' | trans([], 'help') }}">
+        <form class="command" id="backform" action="{{ path(path, { 'id': id, 'name': name, 'action': action, 'scope': scope, 'back': 'new' } ) }}" method="post">
+            <button name="back" type=submit class="buttonaslink" id="backaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_back_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+   <div class="command" id="cancelcommand">
+		<acronym class="help" id="help" title="{{ '#form_cancel_help#' | trans([], 'help') }}">
+        <form class="command" id="cancelform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'new' } ) }}" method="get">
+            <button name="cancel" type=submit class="buttonaslink" id="cancelaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_cancel_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+{% if name=='CARTE' %}	
+   <div class="command" id="kricommand">	
+		{% set path = path|join('kri') %}	
+		<acronym class="help" id="help" title="{{ '#form_kri_help#' | trans([], 'help') }}">		
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'kri' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="kriaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_kri_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+{% endif %}
+   <div class="command" id="evenementcommand">	
+		{% set path = path|join('evenement') %}	
+		<acronym class="help" id="help" title="{{ '#form_evenement_help#' | trans([], 'help') }}">		
+        <form class="command" id="textform" action="{{ path(path, { 'id': id, 'name': name, 'action': 'evenement' } ) }}" method="get">
+            <button name="text" type=submit class="buttonaslink" id="evenementaction"
+            onmouseover="this.className='buttonaslinkover';"
+            onmouseout="this.className='buttonaslink';">{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_evenement_btn#', 'domain': 'labels' } %}</button>
+        </form>
+		</acronym>
+   </div>
+</div>
+</div>
+<div class="rightpadding"></div>
+{% endif %}
+{% if not (is_granted('ROLE_NEW')) %}
+<div class="infomessage" id="infomessage">
+{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#sys_not_authorized#', 'domain': 'system' } %}
+</div> 
+{% endif %}
+<div id="screen" class="screen">
+<script>
+function ctr(path) {
+ 	re1 = new RegExp("^.*[_](.*)[_].*$");
+	re2 = new RegExp("^.*[_].*[_](.*)$");
+	s1 = re1.exec(path); s1 = s1[1].toUpperCase();
+	s2 = re2.exec(path); s2 = s2[1].toUpperCase();
+	s3 = "NEW";
+	s4 = "0000000" + "{{ id }}"; l = String(s4).length;
+	s4 = String(s4).substring(l, l - 7); 	
+	document.write(s1.substring(0,1) + s2.substring(0,1) + s3.substring(0,3) + s4);
+}
+ctr("{{ path }}");
+</script>
+</div>
+</div>
+<script type="text/javascript">
+function onSubmitForm()
+{
+  if(document.pressed == 'enter')
+  {
+   document.formnew.action ="{{path(path, { 'id': id, 'name': name, 'action': 'enter' }) }}";
+  }
+  else
+  if(document.pressed == 'create')
+  {
+	if(demandeConfirmation())
+    	document.formnew.action ="{{path(path, { 'id': id, 'name': name, 'action': 'create' }) }}";
+	else
+		document.formnew.action ="{{path(path, { 'id': id, 'name': name, 'action': 'enter' }) }}";
+  }
+  return true;
+}
+function demandeConfirmation() {
+		var answer = confirm("{% render 'MyCompanyMyProjectAppBundle:View:translate' with {'text': '#form_conf_create_label#', 'domain': 'labels' } %}")
+			if (answer)	return true;
+			return false;
+}
+</script>
+{% endblock content%}
